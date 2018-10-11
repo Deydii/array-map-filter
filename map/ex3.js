@@ -59,7 +59,18 @@ En sortie:
 
  */
 
-function getMoviesFreshness(movies) {
+const getMoviesFreshness = (movies) => {
+  const newArray = movies.map(tab => {
+    if (tab.rating < 60) {
+      tab.label = "rotten";
+    } else if (tab.rating >= 60 && tab.rating <= 75) {
+      tab.label = "fresh";
+    } else {
+      tab.label = "certified fresh";
+    }
+    return tab;
+  })
+  return newArray;
 }
 
 
