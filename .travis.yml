@@ -1,3 +1,4 @@
-language: node_js
+language: node_js>> .travis.yml
 node_js:
-  - "node"
+echo language: node_js
+language: node_js node_js: - node
